@@ -1,0 +1,32 @@
+{
+  "example.com": {
+    "TXT": [
+      "v=spf1 ip4:192.0.2.10 -all"
+    ]
+  },
+  "s2026._domainkey.example.com": {
+    "TXT": [
+      "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA36HtR+NnJm+CUj6J5GuCwFUCZ61QQQLxr9RDIrCE0wJXEd05w3KT0BhpMlYDq41+NzQXg+R3IM0wEgcjghfce1WIAFpIB9Hoo06HVQwZ3MOlvXG8n0HOatUL0MSOU4p+QFZZ1kS0Cnr4GBUhyZXLY8Rfab8QRv4IesWPmCqu3rfHVW5uOR+vQlBL6HMMhqIFJStCDMJwOlznyNrtQ9aJIV84u5R4aHECE9Ex9UqOlxA9WgAGXIJ5K2p0DC4CyEa/h+HB8DQxssM5sX3mkbK0x+V4fGX3lwbokbqAv7QgHAI1Z2BEn7ux6I2nWxg+zM3rAPIyGp4YLx+EzEvDg26nTwIDAQAB"
+    ]
+  },
+  "_dmarc.example.com": {
+    "TXT": [
+      "v=DMARC1; p=reject; adkim=r; aspf=r; rua=mailto:dmarc@example.com"
+    ]
+  },
+  "evil.test": {
+    "TXT": [
+      "v=spf1 ip4:203.0.113.66 -all"
+    ]
+  },
+  "esp.test": {
+    "TXT": [
+      "v=spf1 ip4:198.51.100.20 -all"
+    ]
+  },
+  "esp1._domainkey.esp.test": {
+    "TXT": [
+      "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvgS6GZwfEFC51fHFmb+ZRSf9UceNJlfFT4Fa3l0HP5AizVh0Ef2QfYoCl53TimTZx6j3sMn5VCFijSxnj/NoqDyS0FEdP747AjQZE0no/wCY86ra8/5nd62hJvTBjS8WHQ9FW9lQoSie6LR2Zg+97z5uc9/yLLG5P9em2tm44Tzug+6do/VQhQSOXhdXlJoOwhFLP3Iwf7Wyvjq8edfqWPXs36TDZTJVtMyME2I/Erxlxg9RJ12/jf7qiHWij1q0HY9pcCKcDJigTCaPxMOP+Cg1CHdhY7E7HzgRnW7e1GWyqbXDSOQNif+jzkrhxyQzcCtc1BMFVbwzD0/eYUJtCQIDAQAB"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+Authentication-Results: mx.receiver.test; spf=fail smtp.mailfrom=example.com; dkim=pass header.d=example.com header.s=s2026; dmarc=pass (p=reject dis=none) header.from=example.com
+Received: from sender.test (sender.test [203.0.113.99]) by mx.receiver.test with ESMTPS; Sat, 21 Nov 2026 09:30:05 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=example.com; s=s2026; t=1795281921; h=from:from:to:to:subject:subject:date:date:message-id; bh=mVaedWcoxiK9Rnmi3CIbJOdl/2zHgB7CAk+gsJzrA98=; b=IhZoRb6mabkDeJmS4T9rRYybjloB290V0xp22weSPbir9b4EW1bqXHDy+uhr6OYK/0io/ye0
+	gUdj9jLJlDlCHOod7qYqRCrcc4THS6NluKCm4+touEiaumPYq0tgZYcjmGzZtK32x4oM2fDh
+	sAUWh72vjCSyU+df3xfokby+eWYaTYrIkyEWB8z9lRIeZUG9JXgUm6rahHJergZm+zGcnyJQ
+	YqXCVlwDzlOGtfNqztjZnhnBppL8lx/Sn1gIlHkI92N/0a/0Jhs361XsAIYZANsr84hjl6Xe
+	i2JJjTEPw5QV0IYAOYTMhO3fkRHWiN6jGqceTGTXfm0GSHUVw3y0yg==
+Return-Path: <alice@example.com>
+From: Alice <alice@example.com>
+To: bob@receiver.test
+Subject: Quarterly report
+Date: Sat, 21 Nov 2026 09:30:00 +0000
+Message-ID: <859837427@mail.example.com>
+
+Report attached.

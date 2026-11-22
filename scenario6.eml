@@ -1,0 +1,15 @@
+Authentication-Results: mx.receiver.test; spf=pass smtp.mailfrom=esp.test; dkim=pass header.d=esp.test header.s=esp1; dmarc=fail (p=reject dis=reject) header.from=example.com
+Received: from sender.test (sender.test [198.51.100.20]) by mx.receiver.test with ESMTPS; Sat, 21 Nov 2026 09:30:05 +0000
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=esp.test; s=esp1; t=1795281921; h=from:from:to:to:subject:subject:date:date:message-id; bh=n+YOQGgTJ7HsdSVo2sUHUVjeqHhHqMsNFCIqRcI/40c=; b=tXCmMB8UJdLl+QVU9lpeQK4ayxLR+QsnW0yO7HrTtNubDeXKA359xcBoh8dOBKYupfZbxdqs
+	gZOP7Ht13XCWonSKMShifSDitjCcNOnGQJ25yZNlIQw60/b0iOzqMLDTNogXSbQg7OJUoj0g
+	0aOQy6z49NVN5P7N9jl9KywCGKWMwpu8+kioIUnqhSJys83eWWJJn+HRB3NC7VP8rlr2snEz
+	HzCkQadWB6xspgt6MXTIh8cmdP6H8aRgTtZWhXqFH6PHc34c9rYCoD1d3zGPfuV2CCJ7sKli
+	+/brYHTUgah6xMCq86gKPAo5pY8h7hzcGZYLUzxa1fIRiP85fT2HLw==
+Return-Path: <b@esp.test>
+From: Alice <alice@example.com>
+To: bob@receiver.test
+Subject: Newsletter
+Date: Sat, 21 Nov 2026 09:30:00 +0000
+Message-ID: <836273688@esp.test>
+
+News!
